@@ -4,4 +4,4 @@ in the definitions.txt file, program identifies the given file as a virus.
 
 To run the program,
 run,
-java -jar "VirusDetector.jar" inside the dist folder.
+java -jar VirusDetector.jar (inside the dist folder)

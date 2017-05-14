@@ -17,6 +17,7 @@ public class Panel extends javax.swing.JFrame {
     public Panel() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**

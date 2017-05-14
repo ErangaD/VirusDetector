@@ -6,9 +6,7 @@
 package virusdetector;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -20,17 +18,15 @@ public class Reader {
      
         ArrayList<String> definitions = new ArrayList<>();  
         try {
-            BufferedReader br = new BufferedReader(new FileReader("definitions.txt"));           
-            String line = br.readLine();
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("definitions.txt"));           
+            String line = bufferedReader.readLine();
             while (line != null) {
                 definitions.add(line);
-                line = br.readLine();
+                line = bufferedReader.readLine();
             }  
             //close the Buffered reader
-            br.close();     
-        } catch(FileNotFoundException e) {
-            return null;
-        } catch(IOException e){
+            bufferedReader.close();     
+        } catch(Exception e){
             return null;
         }
         
